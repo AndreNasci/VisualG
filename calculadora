@@ -8,6 +8,8 @@ inicio
   escreval("Escolha o tipo de operação:")
   escreval("1.Soma")
   escreval("2.Subtração")
+  escreval("3.Multiplicação")
+  escreval("4.Divisão")
   leia(R)
   escolha R
     caso 1
@@ -16,6 +18,12 @@ inicio
     caso 2
       leia(A,B)
       escreval(A," -",B," =",A-B)
+    caso 3
+      leia(A,B)
+      escreval(A," x",B," =",A*B)
+    caso 4
+      leia(A,B)
+      escreval(A," /",B," =",A/B)
     outrocaso
       escreva("Essa opção não existe!")
   fimescolha

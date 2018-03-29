@@ -3,28 +3,58 @@ algoritmo"calculadora"
 var:
   A,B:real
   R:inteiro
+  op:caracter
 inicio
-  escreval("MENU PRINCIPAL")
-  escreval("Escolha o tipo de operação:")
-  escreval("1.Soma")
-  escreval("2.Subtração")
-  escreval("3.Multiplicação")
-  escreval("4.Divisão")
-  leia(R)
-  escolha R
-    caso 1
-      leia(A,B)
-      escreval(A," +",B," =",A+B)
-    caso 2
-      leia(A,B)
-      escreval(A," -",B," =",A-B)
-    caso 3
-      leia(A,B)
-      escreval(A," x",B," =",A*B)
-    caso 4
-      leia(A,B)
-      escreval(A," /",B," =",A/B)
-    outrocaso
-      escreva("Essa opção não existe!")
-  fimescolha
+  repita  
+    escreval("================(MENU PRINCIPAL)================")
+    escreval("Escolha o tipo de operação:")
+    escreval("1.Soma")
+    escreval("2.Subtração")
+    escreval("3.Multiplicação")
+    escreval("4.Divisão")
+    escreval("0.Sair")
+    leia(R)
+    escolha R
+      caso 1
+        limpatela
+        escreval("===================(Adição)=====================")
+        escreva("Digite o primeiro número que deseja somar: ")
+        leia(A)
+        escreva(A," + ")
+        leia(B)
+        escreval(A," +",B," =",A+B)
+      caso 2
+        limpatela
+        escreval("==================(Subtração)===================")
+        escreva("Digite o número do qual deseja subtrair: ")
+        leia(A)
+        escreva(A," - ")
+        leia(B)
+        escreval(A," -",B," =",A-B)
+      caso 3
+        limpatela
+        escreval("================(Multiplicação)=================")
+        escreva("Digite o primeiro número da multiplicação: ")
+        leia(A)
+        escreva(A," x ")
+        leia(B)
+        escreval(A," x",B," =",A*B)
+      caso 4
+        limpatela
+        escreval("==================(Divisão)=====================")
+        escreva("Dividendo: ") 
+        leia(A)
+        escreva("Divisor: ")
+        leia(B)
+        escreval(A," /",B," =",A/B)
+      caso 0
+        fimalgoritmo
+      outrocaso
+        escreva("Essa opção não existe!")
+    fimescolha
+    escreva("Deseja realizar uma nova operação?(S/N)")
+    leia(op)
+    limpatela
+  ate op="N"
+  escreva("Obrigado por utilizar a calculadora!")
 fimalgoritmo

@@ -1,6 +1,22 @@
 algoritmo"calculadora"
 //Autor: @DrumNasci
 var:
+  A,B:real
+  R:inteiro
 inicio
-
+  escreval("MENU PRINCIPAL")
+  escreval("Escolha o tipo de operação:")
+  escreval("1.Soma")
+  escreval("2.Subtração")
+  leia(R)
+  escolha R
+    caso 1
+      leia(A,B)
+      escreval(A," +",B," =",A+B)
+    caso 2
+      leia(A,B)
+      escreval(A," -",B," =",A-B)
+    outrocaso
+      escreva("Essa opção não existe!")
+  fimescolha
 fimalgoritmo

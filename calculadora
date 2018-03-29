@@ -5,19 +5,21 @@ var:
   R:inteiro
   op:caracter
 inicio
-  repita  
+  repita
     escreval("================(MENU PRINCIPAL)================")
     escreval("Escolha o tipo de operação:")
     escreval("1.Soma")
     escreval("2.Subtração")
     escreval("3.Multiplicação")
     escreval("4.Divisão")
+    escreval("5.Exponenciação")
+    escreval("6.Radiciação")
     escreval("0.Sair")
     leia(R)
     escolha R
       caso 1
         limpatela
-        escreval("===================(Adição)=====================")
+        escreval("================(Adição)================")
         escreva("Digite o primeiro número que deseja somar: ")
         leia(A)
         escreva(A," + ")
@@ -25,7 +27,7 @@ inicio
         escreval(A," +",B," =",A+B)
       caso 2
         limpatela
-        escreval("==================(Subtração)===================")
+        escreval("================(Subtração)================")
         escreva("Digite o número do qual deseja subtrair: ")
         leia(A)
         escreva(A," - ")
@@ -33,7 +35,7 @@ inicio
         escreval(A," -",B," =",A-B)
       caso 3
         limpatela
-        escreval("================(Multiplicação)=================")
+        escreval("================(Multiplicação)================")
         escreva("Digite o primeiro número da multiplicação: ")
         leia(A)
         escreva(A," x ")
@@ -41,12 +43,28 @@ inicio
         escreval(A," x",B," =",A*B)
       caso 4
         limpatela
-        escreval("==================(Divisão)=====================")
-        escreva("Dividendo: ") 
+        escreval("================(Divisão)================")
+        escreva("Dividendo: ")
         leia(A)
         escreva("Divisor: ")
         leia(B)
         escreval(A," /",B," =",A/B)
+      caso 5
+        limpatela
+        escreval("================(Exponenciação)=================")
+        escreva("Base:")
+        leia(A)
+        escreva("Expoente:")
+        leia(B)
+        escreval(A," ^",B," =",A^B)
+      caso 6
+        limpatela
+        escreval("==================(Radiciação)==================")
+        escreva("Radicando: ")
+        leia(A)
+        escreva("Índice: ")
+        leia(B)
+        escreval("Raiz de",A," no índice",B," =",A^(1/B))
       caso 0
         fimalgoritmo
       outrocaso

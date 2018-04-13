@@ -2,7 +2,7 @@ algoritmo"calculadora"
 //Autor: @DrumNasci
 var:
   A,B:real
-  R:inteiro
+  R,i,p,n:inteiro
   op:caracter
 inicio
   repita
@@ -14,6 +14,7 @@ inicio
     escreval("4.Divisão")
     escreval("5.Exponenciação")
     escreval("6.Radiciação")
+    escreval("7.Detector de Números Primos")
     escreval("0.Sair")
     leia(R)
     escolha R
@@ -65,6 +66,20 @@ inicio
         escreva("Índice: ")
         leia(B)
         escreval("Raiz de",A," no índice",B," =",A^(1/B))
+      caso 7
+        limpatela 
+        escreval("==========(Detector de Números Primos)==========")
+        leia(n)
+        para i de 1 ate n faca
+          se (n mod i)=0 entao
+            p<-p+1
+          fimse
+        fimpara
+        se (p=n+1) entao
+          escreval(n," é primo.")
+        senao
+          escreval(n," não é primo.")
+        fimse
       caso 0
         fimalgoritmo
       outrocaso

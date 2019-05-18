@@ -1,5 +1,5 @@
 algoritmo"calculadora"
-//Autor: @DrumNasci
+//Autor: @AndreNasci
 var:
   A,B:real
   R,i,p,n:inteiro
